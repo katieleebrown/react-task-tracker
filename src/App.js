@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
 import Card from './components/Card';
+import Footer from './components/Footer';
+import About from './components/About';
 
 
 function App() {
@@ -76,10 +79,20 @@ function App() {
   }
 
   return (
-    <div className="w-100">
-      <Header />
-      <Card tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} onAdd={addTask} />
-    </div>
+    <Router>
+      <div className="w-100 d-flex flex-column min-vh-100">
+        <Header />
+        <Routes>
+          <Route path='/' element={
+            <>
+              <Card tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} onAdd={addTask} />
+            </>
+          } />
+          <Route path='/about' element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

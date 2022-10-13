@@ -17,6 +17,13 @@
       "day": "Feb 9th at 12:00pm",
       "reminder": false,
       "id": 3
+    },
+    {
+      "text": "Parkour!",
+      "day": "Oct 31, 3:00 pm",
+      "notes": "Need sneakers and socks",
+      "reminder": true,
+      "id": 4
     }
   ]
 }

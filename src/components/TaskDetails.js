@@ -36,6 +36,7 @@ function TaskDetails() {
         <div className='container mt-3 p-3 border'>
             <h4>{task.text}</h4>
             <p>{task.day}</p>
+            <p>{task.notes}</p>
             <button className='btn btn-primary' onClick={() => {
                 navigate(-1)
             }}>Go Back</button>

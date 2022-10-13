@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import About from './components/About';
+import TaskDetails from './components/TaskDetails'
 
 
 function App() {
@@ -88,6 +89,7 @@ function App() {
               <Card tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} onAdd={addTask} />
             </>
           } />
+          <Route path='/task/:id' element={<TaskDetails />} />
           <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
